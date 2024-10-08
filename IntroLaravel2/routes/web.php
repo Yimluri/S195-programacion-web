@@ -16,3 +16,14 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/formulario', function () {
+    return view('formulario');
+});
+Route::get('/clientes', function () {
+    return view('clientes');
+});
+
+Route::view('/componentes','componentes')->name('rutacomponentes');
+
+
+
