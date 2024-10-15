@@ -19,11 +19,11 @@
       <ul class="navbar-nav">
 
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Registro de clientes</a>
+          <a class="nav-link {{ request()->routeIs('formulario')?'text-warning':'' }}" aria-current="page" href="/formulario">Registro de clientes</a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="/clientes">Consultar clientes</a>
+          <a class="nav-link {{ request()->routeIs('clientes')?'text-danger':'' }}" href="/clientes">Consultar clientes</a>
         </li>
       </ul>
     </div>
