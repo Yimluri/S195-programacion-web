@@ -4,6 +4,7 @@
   @section('contenido')
   <!-- formulario -->
     <div class="container mt-5">
+      @dump($id)
       <div class="card">
     <div class="card text-center">
     <div class="card-header">

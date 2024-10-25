@@ -20,19 +20,15 @@ class controladorVistas extends Controller
     }
     public function procesarCliente(Request $solicitud)
     {
-        //return ('Llego tu formulario al controlador');
+        //redirección usando la ruta
+        //return redirect('/');
 
-        //imprimimos todo lo que viene en la solicitud
-        //return $solicitud->all();
+        //redirección con nombre de ruta
+        //return redirect()->route('clientes');
 
-        //Imprimimos la ruta donde viene la solicitud
-        //return $solicitud->path();
-
-        //verifica de donde viene la petición pero ahora si con la ruta completa
-        //return $solicitud->url();
-
-        //Muestra la IP
-        return $solicitud->ip();
+        $id=[['usuario'=>1],['usuario'=>2]];
+        
+        return view('formulario', compact('id'));
     }
 }
 

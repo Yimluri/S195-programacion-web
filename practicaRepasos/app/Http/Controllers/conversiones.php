@@ -8,5 +8,9 @@ class conversiones extends Controller
 {
     public function operaciones(){
         
+        
+        public function C1(){
+
+        }
     }
 }
