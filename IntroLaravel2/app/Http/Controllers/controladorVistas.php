@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Requests\validadorCliente;
 
 class controladorVistas extends Controller
 {
@@ -18,7 +19,7 @@ class controladorVistas extends Controller
     {
         return view('clientes');
     }
-    public function procesarCliente(Request $solicitud)
+    public function procesarCliente(validadorCliente $solicitud)
     {
         //redirección usando la ruta
         //return redirect('/');
@@ -26,9 +27,12 @@ class controladorVistas extends Controller
         //redirección con nombre de ruta
         //return redirect()->route('clientes');
 
-        $id=[['usuario'=>1],['usuario'=>2]];
-        
-        return view('formulario', compact('id'));
+        //$id=[['usuario'=>1],['usuario'=>2]];
+        //return view('formulario', compact('id'));
+        $usuario= $solicitud->input('txtnombre');
+        session()->flash('exito','Se guardó el usuario:  '.$usuario);
+        return to_route('formulario');
+
     }
 }
 
