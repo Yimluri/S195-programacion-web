@@ -57,7 +57,7 @@
   </div>
 
   <div class="card-footer text-body-secondary">
-   <button type="submit" class="btn btn-primary">Guardar</button>
+   <button type="submit" class="btn btn-primary">{{ __('Guardar Cliente')}}</button>
 
   </form>
   </div>
