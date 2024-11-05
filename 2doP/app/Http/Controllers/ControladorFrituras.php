@@ -8,14 +8,14 @@ class ControladorFrituras extends Controller
 {
     public function resultados(Request $peticion){
 
-        //$validate = $peticion([
+        $validate = $peticion->validate([
 
-        //    'nombre' => 'required',
-        //    'sabor' => 'required',
-        //    'peso' => 'required'
-        //]);
+            'nombre' => 'required',
+            'sabor' => 'required',
+            'peso' => 'required'
+        ]);
 
-        return $peticion -> all();
+        return $peticion->all();
     }
     public function abrirFormulario(){
 

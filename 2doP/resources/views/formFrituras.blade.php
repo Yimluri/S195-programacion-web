@@ -16,20 +16,24 @@
     <div class="container col-md-5">
 
     <form action="/enviar" method="POST">
-
+    @csrf
         <div class="mb-3">
             <label  class="form-label">Nombre: </label>
             <input type="text" name="nombre" class="form-control" >
+            <div class="alert alert-primary" role="alert">
+            {{ $errors->first('nombre')}} </div>
         </div>
 
         <div class="mb-3">
             <label class="form-label">Sabor(s): </label>
             <input type="text" name="sabor" class="form-control" >
+            <small class="text-danger fst-italic">{{ $errors->first('sabor')}}</small>
         </div>                
 
         <div class="mb-3">
             <label  class="form-label">Peso: </label>
             <input type="text" name="peso" class="form-control"  >
+            <small class="text-danger fst-italic">{{ $errors->first('peso')}}</small>
         </div>
 
         <button type="" class="btn btn-primary "> Guardar Fritura</button>
