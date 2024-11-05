@@ -6,12 +6,20 @@ use Illuminate\Http\Request;
 
 class ControladorFrituras extends Controller
 {
-    
-public function abrirFormulario(){
+    public function resultados(Request $peticion){
 
- 
-}
+        //$validate = $peticion([
 
+        //    'nombre' => 'required',
+        //    'sabor' => 'required',
+        //    'peso' => 'required'
+        //]);
 
+        return $peticion -> all();
+    }
+    public function abrirFormulario(){
+
+        return view('formFrituras');
+    }
 
 }
