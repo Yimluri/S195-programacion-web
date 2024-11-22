@@ -26,7 +26,7 @@ class validadorCliente extends FormRequest
             'txtnombre'=>'required',
             'txtapellido'=>'required',
             'txtcorreo'=>'required',
-            'txttelefono'=>'required|nullable'
+            'txttelefono'=>'required'
         ];
     }
 }

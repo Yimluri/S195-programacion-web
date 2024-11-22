@@ -6,7 +6,6 @@
     <div class="container mt-5">
       @if (session('exito'))
       <x-Alert tipo="success">{{ session('exito') }}</x-Alert>
-
       @endif
       @session('exito')
 
@@ -27,8 +26,8 @@
     </div>
 
   <div class="card-body">
-  <form action="/enviar" method="POST">
-    @csrf 
+  <form action="{{ route('procesar') }}" method="POST">
+    @csrf <!-- seguridad -->
   <div class="mb-3">
 
   <label for="exampleFormControlInput1" class="form-label">Nombre:</label>
