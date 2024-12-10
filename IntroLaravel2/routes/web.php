@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\clienteController;
+use App\Http\Controllers\ReporteController;
 
 
 Route::view('/componentes','componentes')->name('rutacomponentes');
@@ -21,4 +22,6 @@ Route::get('/cliente/{id}/editar',[clienteController::class,'edit'])->name('edit
 Route::post('/cliente/actualizar',[clienteController::class,'update'])->name('clientes.update');//se utiliza el .update porque es la ruta donde se procesan los datos
 //Ruta para eliminación
 Route::delete('/cliente/{id}/delete',[clienteController::class,'destroy'])->name('clientes.destroy');
+
+Route::get('reportes', [ReporteController::class, 'index'])->name('reportes');
 
